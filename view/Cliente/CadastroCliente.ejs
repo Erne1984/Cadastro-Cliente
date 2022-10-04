@@ -1,21 +1,33 @@
 <html>
-    <body>
-        <h1>Cadastro Usuario</h1>
-        <form action="/casdastro/Usuario/salvar" method="post">
-           
-            <input name="nome" type="text"> <br>
-            <label> Nome:</label>
-            <input name="senha" type="password"> <br>
-            <label >Senha: </label>
-            <input type="submit" value="Cadastro">
-        </form>
 
-        <% if(mensagem) { %>
+<body>
 
-            <p> 
-                <label style="color: red;"><%= mensagem %></label>
-            </p>
+<h1>Cadastro de Cliente</h1>
 
-        <%}>
-    </body>
+<form action="/cadastro/cliente/salvar" method="POST">
+
+<label>Nome:</label>
+
+<input name="nome" type="text" /><br />
+
+<label>Senha:</label>
+
+<input name="senha" type="password" /><br /> 
+
+<input type="submit" value="cadastro" />
+
+</form>
+
+<% if(mensagem) { %>
+
+<p>
+
+<label style="color: Red"> <%= mensagem %></label>
+
+</p>
+
+<%}%>
+
+</body> 
+
 </html>
